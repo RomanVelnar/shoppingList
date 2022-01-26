@@ -1,3 +1,4 @@
+/* Removed all the webpage styling */
 * {
     margin: 0;
     padding: 0;
@@ -62,13 +63,15 @@ form button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease;
 }
 
 .shop li {
     flex: 1;
 }
 
-.delete-btn, .complete-btn {
+.delete-btn, 
+.complete-btn {
     background: #6573f0;
     color: whitesmoke;
     border: none;
@@ -79,4 +82,60 @@ form button:hover {
 
 .complete-btn {
     background: rgb(107, 26, 26);
+}
+
+.shop-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #6573f0;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #6573f0;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: whitesmoke;
+    color: #6573f0;
 }

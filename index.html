@@ -13,17 +13,21 @@
     <header>
         <h1>Shopping List</h1>
     </header>
-    <form action="">
+    <form>
         <input type="text" class="shop-input">
         <button class="shop-button" type="submit">
             <i class="fa-solid fa-circle-plus"></i>
         </button>
+        <div class="select">
+            <select name="shops" class="shop-filter">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+        </div>
     </form>
-    <div shop-container>
+    <div class="shop-container">
         <ul class="shop-list">
-            <div class="shop">
-                <li></li>
-            </div>
         </ul>
 
     </div>
